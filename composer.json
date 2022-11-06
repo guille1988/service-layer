@@ -1,0 +1,28 @@
+{
+    "name": "felipetti/service-layer",
+    "description": "This package is for creating a service layer in Laravel projects",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guillermo Felipetti",
+            "email": "guill388@hotmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Felipetti\\ServiceLayer\\ServiceLayerServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Felipetti\\ServiceLayer\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.18"
+    }
+}
