@@ -68,7 +68,7 @@ For any issues, questions or suggestions, please don't hesitate to post it in is
 
 ## Credits:
 
-Special thanks to [Franciso Panozzo](https://github.com/franpanozzo) who greatly helped me along the way =).
+Special thanks to [Francisco Panozzo](https://github.com/franpanozzo) who greatly helped me along the way =).
 
 ## License:
 
