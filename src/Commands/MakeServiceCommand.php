@@ -58,10 +58,7 @@ class MakeServiceCommand extends BaseCommand
      */
     public function throwError(string $message): void
     {
-        echo PHP_EOL;
         $this->components->error($message);
-        echo PHP_EOL;
-
         exit(1);
     }
 
