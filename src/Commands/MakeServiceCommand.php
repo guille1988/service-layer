@@ -19,6 +19,9 @@ class MakeServiceCommand extends BaseCommand
     // Description of the functionality of the command.
     protected $description = 'Create a new service class';
 
+    // Error message of service file already exists in the given directory.
+    protected string $fileAlreadyExists = 'Service already exists';
+
     // Has the model folder path with checked existence
     protected string $serviceFolderPath;
 
@@ -56,10 +59,25 @@ class MakeServiceCommand extends BaseCommand
     public function throwError(string $message): void
     {
         echo PHP_EOL;
-        $this->error($message);
+        $this->components->error($message);
         echo PHP_EOL;
 
         exit(1);
+    }
+
+
+    /**
+     * Check if service file is already in the folder.
+     *
+     * @param string $serviceName
+     * @return void
+     */
+    public function checkIfFileAlreadyExists(string $serviceName): void
+    {
+        $serviceFileName = $this->serviceFolderPath . '/' . $serviceName . '.php';
+
+        if(File::exists($serviceFileName))
+            $this->throwError($this->fileAlreadyExists);
     }
 
 
@@ -104,6 +122,7 @@ class MakeServiceCommand extends BaseCommand
     public function handle(): void
     {
         $serviceName = $this->argument('service');
+        $this->checkIfFileAlreadyExists($serviceName);
         $this->stringConversionsAndReplace($serviceName);
         $this->components->info($this->getFinalSuccessMessage());
     }
