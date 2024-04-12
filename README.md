@@ -2,11 +2,11 @@
 
 ## What it does:
 
-This package allows you to create the service layer of a Laravel project, or all the layers necessary for the development of an application; in a fast and personalized way. You can put the name you want to this layer, Service, Repository or anything you want; it's your choice. Look at the configuration section, to personalize this package and adapt it your preferences =).
+This package allows you to create the service layer of a Laravel project, or all the layers necessary for the development of an application; in a fast and personalized way. You can put the name you want to this layer, Services, Repositories, Actions or anything you want; it's your choice. Look at the configuration section, to personalize this package and adapt it your preferences =).
 
 ## Installation:
 
-```php
+```bash
 composer require felipetti/service-layer
 ```
 
@@ -14,25 +14,25 @@ composer require felipetti/service-layer
 
 To build a service layer, example:
 
-```php
+```bash
 php artisan make:service UserService
 ```
 
 To build all layers, example:
 
-```php
+```bash
 php artisan make:all Post
 ```
 
 You can modify the creation of layers and other stuff, publishing config:
 
-```php
+```bash
 php artisan vendor:publish --tag=service-layer-config
 ```
 
 To publish stub and personalize the service file:
 
-```php
+```bash
 php artisan vendor:publish --tag=service-layer-stub
 ```
 ## Configuration:

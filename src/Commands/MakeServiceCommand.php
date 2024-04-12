@@ -1,18 +1,14 @@
 <?php
 
-
 namespace Felipetti\ServiceLayer\Commands;
-
 
 use Felipetti\ServiceLayer\Helper\StringHelper;
 use Illuminate\Support\Facades\File;
 use Exception;
 use Error;
 
-
 class MakeServiceCommand extends BaseCommand
 {
-
     // Is the command line that triggers everything.
     protected $signature = 'make:service {service}';
 
@@ -21,7 +17,6 @@ class MakeServiceCommand extends BaseCommand
 
     // Has the model folder path with checked existence
     protected string $serviceFolderPath;
-
 
     /**
      * Charges all needed variables for the command to initiate.
@@ -34,7 +29,6 @@ class MakeServiceCommand extends BaseCommand
         $this->serviceFolderPath = empty($serviceFolderPath) ? app_path('Services') : $serviceFolderPath;
     }
 
-
     /**
      * Sets the final success message of the command
      *
@@ -45,7 +39,6 @@ class MakeServiceCommand extends BaseCommand
     {
        $this->finalSuccessMessage = "Service [$serviceLocalPath] created successfully";
     }
-
 
     /**
      * Displays an error message and exits the application.
@@ -61,7 +54,6 @@ class MakeServiceCommand extends BaseCommand
 
         exit(1);
     }
-
 
     /**
      * Perform string conversions and replace stub variables with them.
@@ -94,7 +86,6 @@ class MakeServiceCommand extends BaseCommand
             $this->throwError($exception->getMessage());
         }
     }
-
 
     /**
      * Generates all the functions to make the command perform.

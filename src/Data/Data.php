@@ -1,15 +1,11 @@
 <?php
 
-
 namespace Felipetti\ServiceLayer\Data;
-
 
 use Felipetti\ServiceLayer\Helper\StringHelper;
 
-
 final class Data
 {
-
     // Has the config name.
     protected string $configFileName = 'service_layer.php';
 
@@ -34,7 +30,6 @@ final class Data
     // Contains the active config, published or not
     protected array $config;
 
-
     /**
      * Sets all the attributes needed to initiate the data class.
      *
@@ -54,7 +49,6 @@ final class Data
         $this->stub = StringHelper::getProperPath($this->publishStubPath, $this->sourceStubPath);
     }
 
-
     /**
      * Gets the config file name.
      *
@@ -64,7 +58,6 @@ final class Data
     {
         return $this->configFileName;
     }
-
 
     /**
      * Gets the path of the source config.
@@ -76,7 +69,6 @@ final class Data
         return $this->sourceConfigPath;
     }
 
-
     /**
      * Gets the path of the published stub.
      *
@@ -86,7 +78,6 @@ final class Data
     {
         return $this->publishStubPath;
     }
-
 
     /**
      * Gets the path of the source stub.
@@ -98,7 +89,6 @@ final class Data
         return $this->sourceStubPath;
     }
 
-
     /**
      * Gets the active config, whether is published or not.
      *
@@ -108,7 +98,6 @@ final class Data
     {
         return $this->config;
     }
-
 
     /**
      * Gets the active stub, whether is published or not.

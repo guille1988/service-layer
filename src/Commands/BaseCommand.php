@@ -1,22 +1,17 @@
 <?php
 
-
 namespace Felipetti\ServiceLayer\Commands;
-
 
 use Felipetti\ServiceLayer\Data\Data;
 use Illuminate\Console\Command;
 
-
 class BaseCommand extends Command
 {
-
     // Has the final success message.
     protected string $finalSuccessMessage;
 
     // Has all paths, config and stub data injected.
     protected readonly Data $data;
-
 
     /*
     * Sets the attributes that will provide data to both commands
@@ -25,9 +20,8 @@ class BaseCommand extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->data = app(Data::class);
+        $this->data = new Data;
     }
-
 
     /**
      * Gets the final success message of the command

@@ -1,21 +1,16 @@
 <?php
 
-
 namespace Felipetti\ServiceLayer\Commands;
-
 
 use Felipetti\ServiceLayer\Helper\StringHelper;
 
-
 class MakeAllCommand extends BaseCommand
 {
-
     // Is the command line that triggers everything.
     protected $signature = 'make:all {model}';
 
     // Description of the functionality of the command.
     protected $description = 'Create all layers specified by user';
-
 
     /**
      * Charges all needed variables for the command to initiate.
@@ -25,7 +20,6 @@ class MakeAllCommand extends BaseCommand
         parent::__construct();
         $this->finalSuccessMessage = "All layers were created successfully";
     }
-
 
     /**
      * Generates all the functions to make the command perform.
