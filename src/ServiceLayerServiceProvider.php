@@ -9,7 +9,7 @@ use Felipetti\ServiceLayer\Data\Data;
 
 class ServiceLayerServiceProvider extends ServiceProvider
 {
-    // This is the name of the package.
+    // Name of the package.
     private string $packageName = 'service-layer';
 
     /**

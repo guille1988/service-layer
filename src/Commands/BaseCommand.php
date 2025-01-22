@@ -7,14 +7,14 @@ use Illuminate\Console\Command;
 
 class BaseCommand extends Command
 {
-    // Has the final success message.
+    // The final success message.
     protected string $finalSuccessMessage;
 
-    // Has all paths, config and stub data injected.
+    // Paths, config and stub data injected.
     protected readonly Data $data;
 
     /*
-    * Sets the attributes that will provide data to both commands
+    * Attributes that will provide data to both commands
     *
     */
     public function __construct()
@@ -24,7 +24,7 @@ class BaseCommand extends Command
     }
 
     /**
-     * Gets the final success message of the command
+     * Final success message of the command
      *
      * @return string
      */

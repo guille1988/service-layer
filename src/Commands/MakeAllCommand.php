@@ -6,14 +6,14 @@ use Felipetti\ServiceLayer\Helper\StringHelper;
 
 class MakeAllCommand extends BaseCommand
 {
-    // Is the command line that triggers everything.
+    // Command line that triggers everything.
     protected $signature = 'make:all {model}';
 
     // Description of the functionality of the command.
     protected $description = 'Create all layers specified by user';
 
     /**
-     * Charges all needed variables for the command to initiate.
+     * Needed variables for the command to initiate.
      */
     public function __construct()
     {

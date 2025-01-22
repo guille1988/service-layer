@@ -6,32 +6,32 @@ use Felipetti\ServiceLayer\Helper\StringHelper;
 
 final class Data
 {
-    // Has the config name.
+    // Config name.
     protected string $configFileName = 'service_layer.php';
 
-    // Contains the name of the service stub.
+    // Name of the service stub.
     protected string $stubFileName = 'Service.stub';
 
-    // Has the path of the published config.
+    // Path of the published config.
     protected string $publishConfigPath;
 
-    // Contains the path of the source config.
+    // Path of the source config.
     protected string $sourceConfigPath;
 
-    // Has the path of the published stub.
+    // Path of the published stub.
     protected string $publishStubPath;
 
-    // Contains the path of the source stub.
+    // Path of the source stub.
     protected string $sourceStubPath;
 
-    // Contains the active stub, published or not.
+    // Active stub, published or not.
     protected string $stub;
 
-    // Contains the active config, published or not
+    // Active config, published or not.
     protected array $config;
 
     /**
-     * Sets all the attributes needed to initiate the data class.
+     * Attributes needed to initiate the data class.
      *
      */
     public function __construct()

@@ -9,17 +9,17 @@ use Error;
 
 class MakeServiceCommand extends BaseCommand
 {
-    // Is the command line that triggers everything.
+    // Command line that triggers everything.
     protected $signature = 'make:service {service}';
 
     // Description of the functionality of the command.
     protected $description = 'Create a new service class';
 
-    // Has the model folder path with checked existence
+    // Model folder path with checked existence.
     protected string $serviceFolderPath;
 
     /**
-     * Charges all needed variables for the command to initiate.
+     * Needed variables for the command to initiate.
      */
     public function __construct()
     {
@@ -30,7 +30,7 @@ class MakeServiceCommand extends BaseCommand
     }
 
     /**
-     * Sets the final success message of the command
+     * Final success message of the command
      *
      * @param string $serviceLocalPath
      * @return void
@@ -56,7 +56,7 @@ class MakeServiceCommand extends BaseCommand
     }
 
     /**
-     * Perform string conversions and replace stub variables with them.
+     * Performs string conversions and replace stub variables with them.
      *
      * @param string $serviceName
      * @return void
